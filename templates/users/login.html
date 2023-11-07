@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+</head>
+<body background="/static/photo/fon3.jpg">
+<h1>Введите данные для входа</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Войти</button>
+    <button><a href="/registration/">Регистрация</a></button>
+</form>
+</body>
+</html>

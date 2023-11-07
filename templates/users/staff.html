@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лучшие сотрудники</title>
+</head>
+<body background="/static/photo/fon3.jpg">
+<h1>
+    <center>Фото лучших сотрудников</center>
+</h1>
+<ol>
+    {% for i in post_key %}
+    <h1 class="title">{{i.name}}</h1>
+    <img src="{{i.image.url}}" class="card-img-top">
+    {% endfor %}
+    <form action="{% url 'users:post' %}">
+        {% csrf_token %}
+        <button type="submit" >Назад</button>
+    </form>
+</ol>
+</body>
+</html>
